@@ -11,3 +11,22 @@
 - remove some of your logic in your views into view helpers
 - show when the last time a movie was voted on, faved or saved
 - show number of search results as "85 search results" for both IMDB and your own DB
+
+## bonus tip! to test out helpers in rails console try the following
+
+fire up rails console
+
+```bash
+$ rails c
+```
+
+if you call it in your view with ``` <%= pluralize(3, person') %>```
+
+you can test it out in rails console with the helper object
+
+```bash
+[2] pry(main)> helper.pluralize(3, 'amigo')
+=> "3 amigos"
+[3] pry(main)> helper.pluralize(3, 'person')
+=> "3 people"
+```
