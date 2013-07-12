@@ -1,0 +1,12 @@
+<%= render partial: 'movie', locals: { :movie => @movie } %>
+
+<% if @movie.is_a? Imdb::Movie %>
+  <%= render 'fave_and_save' %>
+  Available in the following <%= pluralize(@movie.languages.size, 'language') %>:
+  <%= @movie.languages.to_sentence %>
+<% else %>
+  <%= render 'vote_buttons' %>
+<% end %>
+
+<h2>Cast</h2>
+<% render partial: 'cast', locals: { :movie => @movie } %>

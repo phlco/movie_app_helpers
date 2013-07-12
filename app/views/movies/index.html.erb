@@ -1,0 +1,13 @@
+<h1>Movies</h1>
+<ul>
+  <% @movies.each do |movie| %>
+  <li>
+    <% if movie.is_a? Imdb::Movie %>
+      <%= button_to "Fave", save_movie_path(movie.id, fave: true) %>
+      <%= link_to movie.title, movie_result_path(movie.id) %>
+    <% else %>
+      <%= link_to movie.title, movie_path(movie.id) %>
+    <% end %>
+  </li>
+  <% end %>
+</ul>

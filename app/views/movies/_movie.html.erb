@@ -1,0 +1,7 @@
+<h1><%= movie.title %></h1>
+<%= image_tag movie.poster %>
+<p><%= truncate(movie.plot, length: 40) %></p>
+<ul>
+  <li><%= movie.year %></li>
+  <li><%= movie.mpaa_rating %></li>
+</ul>

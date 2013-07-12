@@ -1,0 +1,4 @@
+<%= button_to "Vote Up", rate_movie_path(@movie.id, pref: :up) %>
+<%= @movie.rating %>
+<%= button_to "Vote Down", rate_movie_path(@movie.id, pref: :down)%>
+<%= button_to "Fave", rate_movie_path(@movie.id, pref: :fave)%>

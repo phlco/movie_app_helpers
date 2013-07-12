@@ -1,0 +1,26 @@
+<!--
+date helpers
+http://api.rubyonrails.org/classes/ActionView/Helpers/DateHelper.html#method-i-distance_of_time_in_words
+-->
+<%= distance_of_time_in_words_to_now(50, Time.now) %> ago.
+<br>
+<%= truncate("It was a dark and story night", length: 15, omission: '...') %>
+<br>
+<%= %w(lions tigers bears).to_sentence %>
+<br>
+<%= pluralize(5, 'golden ring') %>
+
+<%= explore %>
+<!--
+number helpers
+http://api.rubyonrails.org/classes/ActionView/Helpers/NumberHelper.html#method-i-number_with_delimiter
+-->
+<br>
+
+<%= number_to_phone('8675309') %>
+<br>
+
+<%= number_to_percentage(100) %>
+<br>
+
+<%= number_to_currency(1234567890.506, locale: :fr) %>
